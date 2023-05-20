@@ -121,6 +121,8 @@ runs:
         clean: true
         folder: ${{ inputs.javadoc-source-folder }}
         target-folder: ${{ inputs.target-folder }}
+        git-config-name: github-actions[bot]
+        git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
 
     - name: Set Javadoc source folder for Gradle
       id: set-javadoc-source-folder
@@ -142,3 +144,5 @@ runs:
         clean: true
         folder: ${{ steps.set-javadoc-source-folder.outputs.javadoc-source-folder }}
         target-folder: ${{ inputs.target-folder }}
+        git-config-name: github-actions[bot]
+        git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
